@@ -9,8 +9,8 @@
 
 
 int status = WL_IDLE_STATUS;
-const char* ssid = "Jaddaa";  //  your network name (SSID)
-const char* pass = "giramating";       // your network password
+const char* ssid = "";  //  your network name (SSID)
+const char* pass = "";       // your network password
 
 int localPort = 8000;
 int destPort = 9000;
