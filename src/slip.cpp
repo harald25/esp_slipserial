@@ -5,21 +5,19 @@
 #include <OSCMessage.h>
 #include <SLIPEncodedSerial.h>
 #include <ESP8266WiFi.h>
-#include <WiFiUDP.h>
+#include <WiFiUdp.h>
+
+#include <config.h>
 
 
 int status = WL_IDLE_STATUS;
-const char* ssid = "";  //  your network name (SSID)
-const char* pass = "";       // your network password
 
 int localPort = 8000;
 int destPort = 9000;
-IPAddress outIp(10, 0, 10, 49); //Messages sent out by the ESP will go to this IP
+IPAddress outIp(192, 168, 10, 49); //Messages sent out by the ESP will go to this IP
                                 //outIp is overwritten when the ESP receives a message.
                                 //outIp is the set to match the sender of the message.
-IPAddress espip(10, 0, 10, 50);  //IP of the ESP
-IPAddress gateway(10,0,10,1);
-IPAddress subnet(255,255,255,0);
+
 WiFiUDP Udp;
 SLIPEncodedSerial SLIPSerial(Serial);
 

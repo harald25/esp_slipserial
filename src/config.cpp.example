@@ -1,0 +1,10 @@
+#include <ESP8266WiFi.h>
+
+#include <config.h>
+
+extern const char* ssid = "";  //  your network name (SSID)
+extern const char* pass = "";  // your network password
+
+IPAddress espip(192,168,0,100);  //IP of the ESP
+IPAddress gateway(192,168,0,1);
+IPAddress subnet(255,255,255,0);
